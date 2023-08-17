@@ -13,16 +13,39 @@ public:
 };
 
 int main(){
-    Node* head = new Node(5);
-    cout << head->data << "\n";
-    Node* one = new Node(1);
-    Node* two = new Node(2);
-    Node* three = new Node(4);
-    head->next = one;
-    one->next = two;
-    one->next->next = three;
+    
+    Node* head = NULL;
+    Node* temp = head;
+    while(true){
+        int x;
+        cin >> x;
+        Node* newNode = new Node(x);
+
+        if(x == -1){
+            break;
+        }
+
+        if(head == NULL){
+            head = newNode;
+            temp = head;
+        }
+        else{
+            temp->next = newNode;
+            temp = temp->next;
+        }
+    }
+
+
+    
 
     //5 -> 1 -> 2 -> 3 ->NULL
-    cout << head->data << " -> " << head->next->data << " -> " << head->next->next->data  << " -> " << head->next->next->next->data; 
+    //cout << head->data << " -> " << head->next->data << " -> " << head->next->next->data  << " -> " << head->next->next->next->data; 
+    temp = head;
+    while(temp != NULL){
+        cout << temp->data << " -> ";
+        temp = temp->next;
+    }
+    cout << "X";
+
 }
 
