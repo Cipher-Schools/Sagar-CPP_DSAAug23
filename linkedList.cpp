@@ -23,6 +23,10 @@ void print(Node * head){
 // 3 -> 12
 // 2 4 12 5 1 7 3 8 9 1 2 3 
 
+// 1 -> 5
+// 5 2 4 5 1 7 3 8 9 1 2 3 
+// POS > 0
+
 /* Node* insertAtPosition(Node* head, int pos, int value){
 
 }
