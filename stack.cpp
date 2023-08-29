@@ -27,6 +27,10 @@ public:
         head = NULL;
     }
 
+    inline int mul(int a, int b){
+        return a * b;
+    }
+
     void push(int x)
     {
         if (head == NULL)
@@ -85,7 +89,16 @@ int main()
     st->push(7);
     st->push(1);
     st->push(3);
+    int a, b;
+    st->mul(a,b);
     
+    /*
+    stack st;
+    st.push(4);
+    st.push(7);
+    st.push(1);
+    st.push(3);
+    */
     while(!st->isEmpty()){
         cout << st->top() << " ";
         st->pop();
